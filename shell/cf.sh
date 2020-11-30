@@ -14,7 +14,7 @@ do
 		declare -i count
 		rm -rf icmp temp log.txt data.txt anycast.txt
 		mkdir icmp
-		curl --ipv4 https://proxy.freecdn.workers.dev/?url=https://raw.githubusercontent.com/mgsqz/better-cloudflare-ip/master/data.txt -# -o data.txt
+		curl --ipv4 https://mgsqz.ml/data.txt -# -o data.txt
 		publicip=$(cat data.txt | grep publicip: | cut -f 2- -d':')
 		domain=$(cat data.txt | grep domain: | cut -f 2- -d':')
 		file=$(cat data.txt | grep file: | cut -f 2- -d':')
